@@ -22,11 +22,12 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">3</span> Moves
-
+            <span class="moves">0</span> Moves
+            
             <div class="restart">
         		<i class="fa fa-repeat"></i>
-        	</div>
+            </div>
+            <span class="timer">0</span>s
         </section>
 
         <ul class="deck">
@@ -79,6 +80,14 @@
                 <i class="fa fa-cube"></i>
             </li>
         </ul>
+
+        <div id="winner-popup">
+            <div>
+                <h1>Congratulations You Won!</h1>
+                <h2>It took you <span id="moves"></span> moves and <span id="time-taken"></span> seconds.</h2>
+                <button id="play-again-button">Play again?</button>
+            </div>
+        </div>
     </div>
 
     <script src="js/app.js"></script>

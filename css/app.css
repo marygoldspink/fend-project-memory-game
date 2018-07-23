@@ -107,3 +107,28 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+.score-panel .timer {
+    margin-left: 18px;
+}
+
+#winner-popup {
+    display: none;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#winner-popup div {
+    align-self: center;
+}
+
+#winner-popup.show {
+    display: flex;
+    position: absolute;
+    background: #FFFFFF;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
