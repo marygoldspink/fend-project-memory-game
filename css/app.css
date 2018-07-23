@@ -112,21 +112,21 @@ h1 {
     margin-left: 18px;
 }
 
-#winner-popup {
+.winner-popup {
     display: none;
     text-align: center;
     align-content: center;
     justify-content: center;
 }
 
-#winner-popup div {
+.winner-popup div {
     align-self: center;
 }
 
-#winner-popup.show {
+.winner-popup.show {
     display: flex;
     position: absolute;
-    background: #FFFFFF;
+    background: #fff;
     top: 0;
     left: 0;
     width: 100vw;
