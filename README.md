@@ -3,18 +3,25 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
+* [Dependencies](#Dependencies)
 * [Contributing](#contributing)
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+Open the index.html to view the game. Simply start clicking a square to start a game. You can turn over 2 cards for each turn. If they match then they will turn green and be locked open. Otherwise they will turn themselves back over. The aim of the game is to find all the pairs.
 
-To get started, open `js/app.js` and start building out the app's functionality
+The game allows you to achieve different star ratings:
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+- If you finish the game in 10 turns or under you'll get 3 stars.
+- If you take longer than 10 but fewer than 15 turns you'll get 2 stars.
+- Anything longer than 15 will give you 1 star.
+
+## Dependencies
+
+This project uses Font Awesome and Coda from Google Fonts.
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This repository is my submission for the Udacity Google Nanodegree for Web Developers.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).

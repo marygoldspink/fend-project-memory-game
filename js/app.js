@@ -5,9 +5,18 @@ const namesOfCards = ["diamond", "diamond", "paper-plane-o", "paper-plane-o", "a
 let listOfOpenCards = [];
 let moveCounter = 0;
 let startTime = -1;
+let starRating = 3;
 const moveCounterDisplay = document.getElementsByClassName('moves')[0];
+const timerElement = document.getElementsByClassName('timer')[0];
 
 resetGame();
+
+setInterval(function() {
+    if (startTime > -1) {
+        startTime += 1
+        timerElement.innerHTML = startTime;
+    }
+}, 1000);
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -70,6 +79,7 @@ function showWinnerModalIfFinshed() {
         document.getElementById('winner-popup').classList.add('show');
         document.getElementById('moves').innerHTML = moveCounter;
         document.getElementById('time-taken').innerHTML = startTime;
+        document.getElementById('star-rating').innerHTML = starRating;
     }
 }
 
@@ -90,25 +100,25 @@ function updateMoveCounter() {
     moveCounterDisplay.innerHTML = moveCounter;
 
     let stars = document.querySelectorAll('.stars .fa');
-    if (moveCounter > 8) {
+    if (moveCounter > 10) {
         stars[2].classList.remove('fa-star')
         stars[2].classList.add('fa-star-o');
-    }
-    if (moveCounter > 12) {
-        stars[1].classList.remove('fa-star');
-        stars[1].classList.add('fa-star-o');
+        starRating = 2;
     }
     if (moveCounter > 15) {
-        stars[0].classList.remove('fa-star');
-        stars[0].classList.add('fa-star-o');
+        stars[1].classList.remove('fa-star');
+        stars[1].classList.add('fa-star-o');
+        starRating = 1;
     }
 }
 
 function resetGame() {
     listOfOpenCards = [];
     moveCounter = 0;
+    starRating = 3;
     startTime = -1;
     moveCounterDisplay.innerHTML = moveCounter;
+    timerElement.innerHTML = 0;
 
     /*
     * Display the cards on the page
@@ -174,11 +184,6 @@ function resetGame() {
 function startTimerIfNotStarted() {
     if (startTime === -1) {
         startTime = 0;
-        const timerElement = document.getElementsByClassName('timer')[0];
-        timerElement.innerHTML = 0;
-        setInterval(function() {
-            startTime += 1
-            timerElement.innerHTML = startTime;
-        }, 1000);
+        timerElement.innerHTML = startTime;
     }
 }
